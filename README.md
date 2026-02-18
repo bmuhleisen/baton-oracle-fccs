@@ -6,7 +6,7 @@ Check out [Baton](https://github.com/ConductorOne/baton) to learn more about the
 
 ## Prerequisites
 
-This connector is scoped to **FCCS only** (sync + grants for FCCS groups and roles). User lifecycle operations (create/update/delete) are intentionally **not** supported here and should be handled via your dedicated IDCS connector.
+This connector is scoped to **FCCS only**. User lifecycle operations (create/update/delete) are intentionally **not** supported here and should be handled via your dedicated IDCS connector.
 
 ## Authentication
 
@@ -129,15 +129,6 @@ baton resources
 |--------|-------------|
 | **Group Membership** | Grant and revoke user/group membership in groups |
 | **Role Assignment** | Grant and revoke role assignments to users and groups |
-
-### Grant Expansion
-
-The connector implements `GrantExpandable` annotations to support inherited access:
-
-- **Nested Groups**: Users in child groups inherit membership in parent groups
-- **Group-to-Role**: Users in groups inherit role assignments granted to those groups
-
-**Note:** User lifecycle operations (create/update/delete) are not supported. User management should be handled via your IDCS connector.
 
 ## Contributing, Support and Issues
 
